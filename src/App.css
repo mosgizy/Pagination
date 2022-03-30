@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+  background-color: #f1f5f8;
+}
+
+body,
+button {
+  font-family: 'Lato';
+}
+
+.header {
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 7rem;
+  height: .2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #49a6e9;
+}
+
+@media screen and (min-width:600px) {
+  .profiles>* {
+    flex-basis: 47%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .profiles>* {
+    flex-basis: 22.95%;
+  }
+}
+
+.active{
+  background-color: #063251 !important;
+  color: white;
+}
