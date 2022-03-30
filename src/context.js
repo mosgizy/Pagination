@@ -43,9 +43,11 @@ const Context = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, defaultValue);
   const data = fetchPage()
 
+
+
   useEffect(() => {
     data && dispatch({ type: 'STOP_LOADING' })
-    data && dispatch({ type: "GET_USER", payload: [...data].slice(state.startData, state.endData) })
+    dispatch({ type: "GET_USER", payload: [...data].slice(state.startData, state.endData) })
   }, [state.startData, data])
 
   return (

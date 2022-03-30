@@ -14,7 +14,7 @@ const useFetchPage = () => {
 
   useEffect(() => {
     getProfiles()
-  }, [url])
+  }, [])
 
   return profiles
 }
