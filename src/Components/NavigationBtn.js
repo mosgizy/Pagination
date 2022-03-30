@@ -1,4 +1,4 @@
-import React, { useRef,useState } from 'react'
+import React from 'react'
 import { useGlobalContext } from '../context'
 
 const navigate = (val, gap) => {
@@ -46,19 +46,12 @@ const NavigationBtn = () => {
 
 const Btn = ({ value }) => {
     const {currentPage, gap, dispatch } = useGlobalContext()
-    const [active,setActive] = useState(false)
-
-    const activeBtn = useRef(null)
 
     const navigateBtn = (value) => {
         dispatch({ type: 'PAGE', payload: [...navigate(value, gap), value] })
-        console.log(currentPage)
-        if (currentPage <= value) {
-            setActive(true)
-        }
     }
 
-    return <button ref={activeBtn} onClick={() => navigateBtn(value)} className={`bg-green-300 py-1.5 px-3 text-sm rounded-lg ${active ? 'active' : ''}`}>{value}</button>
+    return <button onClick={() => navigateBtn(value)} className={`bg-green-300 py-1.5 px-3 text-sm rounded-lg ${value === currentPage ? 'active' : ''}`}>{value}</button>
 }
 
 export default NavigationBtn
