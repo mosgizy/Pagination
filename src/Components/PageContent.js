@@ -8,7 +8,7 @@ const PageContent = () => {
 
     return (
         <section className='max-w-[1170px] w-[90vw] m-auto'>
-            <article className='flex flex-col mt-24 gap-8 profiles flex-wrap sm:flex-row'>
+            <article className='flex flex-col justify-center mt-24 gap-8 profiles flex-wrap sm:flex-row'>
                 {
                     profiles.map((profile) => {
                         return <Profile key={profile.id} login={profile.login} avatar={profile.avatar_url} url={profile.html_url} />
