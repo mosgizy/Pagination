@@ -1,4 +1,4 @@
-# Visit live site (here)[https://profile-pagination.netlify.app/]
+# Visit live site [here](https://profile-pagination.netlify.app/)
 
 # Getting Started with Create React App
 
